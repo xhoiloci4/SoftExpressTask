@@ -1,0 +1,6 @@
+@SoftExpressTask.Server_HostAddress = http://localhost:5032
+
+GET {{SoftExpressTask.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

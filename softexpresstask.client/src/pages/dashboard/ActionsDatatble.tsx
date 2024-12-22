@@ -15,7 +15,7 @@ export interface User {
 export interface Action {
     id: string
     userId: string
-    devicetype: string
+    deviceType: string
     region: string
     application: string
     timedate: Date
@@ -26,16 +26,16 @@ export interface Action {
 const columns: ColumnDef<Action>[] = [
 
     {
-        accessorKey: "devicetype",
-        header: "Pajisja",
+        accessorKey: "deviceType",
+        header: "Device",
     },
     {
         accessorKey: "application",
-        header: "Aplikacioni",
+        header: "Application",
     },
     {
         accessorKey: "timedate",
-        header: "Data",
+        header: "Time & Date",
     },
 
 ]
@@ -68,6 +68,7 @@ export function ActionsDatatable() {
         setTimeout(() => {
             if (response.status == 200) {
 
+                console.log(data.actions)
                 setActions(data.actions)
 
 
